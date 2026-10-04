@@ -1,0 +1,25 @@
+# Godot 4 cache / import artifacts
+.godot/
+.import/
+export.cfg
+export_credentials.cfg
+*.translation
+
+# Builds
+/builds/
+*.apk
+*.aab
+*.pck
+*.exe
+*.x86_64
+
+# Modèle de build Android (régénéré depuis les export templates)
+/android/
+
+# Editor / OS
+.vscode/*
+!.vscode/extensions.json
+.idea
+.claude/
+.DS_Store
+*.sw?

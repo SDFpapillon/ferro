@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/buildings/Drill.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/buildings/foreuse_lourde.png" id="2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(30, 30)
+
+[node name="DrillHeavy" type="StaticBody2D"]
+collision_layer = 1
+collision_mask = 1
+script = ExtResource("1")
+max_hp = 90.0
+pollution_rate = 8.0
+mine_interval = 2.0
+can_mine_titanium = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2")

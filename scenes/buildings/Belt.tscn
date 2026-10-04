@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/buildings/Belt.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/buildings/BeltItems.gd" id="2"]
+[ext_resource type="Texture2D" path="res://assets/buildings/convoyeur.png" id="3"]
+
+[node name="Belt" type="StaticBody2D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1")
+max_hp = 40.0
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3")
+
+[node name="ItemsLayer" type="Node2D" parent="."]
+z_index = 1
+script = ExtResource("2")

@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/Nest.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/enemies/NestGauge.gd" id="2"]
+[ext_resource type="Texture2D" path="res://assets/units/nid.png" id="3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1"]
+radius = 16.0
+
+[node name="Nest" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 1
+script = ExtResource("1")
+max_hp = 150.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_1")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("3")
+
+[node name="Gauge" type="Node2D" parent="."]
+script = ExtResource("2")

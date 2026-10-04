@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/world/ChunkManager.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/world/GroupRoot.gd" id="2"]
+
+[node name="World" type="Node2D"]
+
+[node name="Ground" type="TileMapLayer" parent="."]
+script = ExtResource("1")
+
+[node name="BuildingsRoot" type="Node2D" parent="."]
+script = ExtResource("2")
+group_name = "buildings_root"
+
+[node name="EnemiesRoot" type="Node2D" parent="."]
+script = ExtResource("2")
+group_name = "enemies_root"
+
+[node name="ProjectilesRoot" type="Node2D" parent="."]
+script = ExtResource("2")
+group_name = "projectiles_root"
